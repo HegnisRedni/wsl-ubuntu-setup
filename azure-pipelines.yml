@@ -1,0 +1,21 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- script: echo Hello, world!
+  displayName: 'Run a one-line script'
+# Ensure the script is executable
+
+- script: chmod +x install-tools.sh
+  displayName: 'Make deploy script executable'
+
+- script: ./install-tools.sh
+  displayName: 'Run deploy script'

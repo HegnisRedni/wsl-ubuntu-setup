@@ -20,5 +20,5 @@ steps:
 - script: chmod +x install-tools.sh
   displayName: 'Make deploy script executable'
 
-- script: ./install-tools.sh
+- script: sudo ./install-tools.sh
   displayName: 'Run deploy script'

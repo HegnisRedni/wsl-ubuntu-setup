@@ -7,6 +7,9 @@ trigger:
 - main
 
 pool:
+  vmImage: 'ubuntu-latest'
+  
+pool:
   name: 'dev_pool'
 
 steps:

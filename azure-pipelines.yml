@@ -8,17 +8,6 @@ trigger:
 
 pool:
   vmImage: 'ubuntu-latest'
-  
-pool:
-  name: 'dev_pool'
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-# Ensure the script is executable
-
-- script: chmod +x install-tools.sh
-  displayName: 'Make deploy script executable'
-
-- script: sudo ./install-tools.sh
-  displayName: 'Run deploy script'
+- script: echo "Pipeline works!"

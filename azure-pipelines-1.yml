@@ -1,6 +1,4 @@
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
+
 # https://aka.ms/yaml
 
 trigger:
@@ -17,3 +15,17 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
+
+
+
+# Starter pipeline
+- task: DockerCompose@1
+  inputs:
+    containerregistrytype: 'Azure Container Registry'
+    azureContainerRegistry: '{"loginServer":"regname0.azurecr.io", "id" : "/subscriptions/14f907f3-64fd-4da1-bf98-3ef778f57217/resourceGroups/rg_dev_inder/providers/Microsoft.ContainerRegistry/registries/Regname0"}'
+    dockerComposeFile: '**/docker-compose.yml'
+    action: 'Run a Docker Compose command'
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+
+
